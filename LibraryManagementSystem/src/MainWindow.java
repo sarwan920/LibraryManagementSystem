@@ -15,6 +15,7 @@ import java.awt.Toolkit;
 import java.sql.Connection;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 public class MainWindow {
 
@@ -77,14 +78,15 @@ public class MainWindow {
 		
 		btnSignUp.setBackground(Color.BLACK);
 		btnSignUp.setForeground(Color.WHITE);
-		btnSignUp.setBounds(28, 131, 155, 34);
+		btnSignUp.setBounds(10, 89, 155, 34);
 		MainWindow.getContentPane().add(btnSignUp);
 		
 		JButton btnLogIn = new JButton("LOG IN");
+		
 				btnLogIn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnLogIn.setForeground(Color.WHITE);
 		btnLogIn.setBackground(Color.BLACK);
-		btnLogIn.setBounds(28, 212, 155, 34);
+		btnLogIn.setBounds(10, 141, 155, 34);
 		MainWindow.getContentPane().add(btnLogIn);
 		
 		JLabel lblWelcomeToOur = new JLabel("Welcome  To Our Library");
@@ -100,8 +102,6 @@ public class MainWindow {
 		lblAllRightsReserved.setHorizontalAlignment(SwingConstants.LEFT);
 		lblAllRightsReserved.setBounds(0, 350, 309, 14);
 		MainWindow.getContentPane().add(lblAllRightsReserved);
-		
-		JLabel imgLabel = new JLabel("");
 		Image img=new ImageIcon(this.getClass().getResource("/Library1.jpg")).getImage();
 		
 		JLabel lblManagmentSystem = new JLabel("Managment System");
@@ -109,6 +109,36 @@ public class MainWindow {
 		lblManagmentSystem.setHorizontalAlignment(SwingConstants.CENTER);
 		lblManagmentSystem.setBounds(32, 39, 177, 39);
 		MainWindow.getContentPane().add(lblManagmentSystem);
+		
+		JLabel lblNewJgoodiesLabel = DefaultComponentFactory.getInstance().createLabel("\"A TRUELY GREAT LIBRARY CONTAINS");
+		lblNewJgoodiesLabel.setFont(new Font("Segoe Print", Font.BOLD, 11));
+		lblNewJgoodiesLabel.setForeground(new Color(128, 128, 128));
+		lblNewJgoodiesLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewJgoodiesLabel.setBounds(10, 210, 231, 21);
+		MainWindow.getContentPane().add(lblNewJgoodiesLabel);
+		
+		JLabel lblInIt = new JLabel("SOMETHING");
+		lblInIt.setFont(new Font("Segoe Print", Font.BOLD, 11));
+		lblInIt.setForeground(new Color(128, 128, 128));
+		lblInIt.setHorizontalAlignment(SwingConstants.CENTER);
+		lblInIt.setBounds(67, 230, 92, 14);
+		MainWindow.getContentPane().add(lblInIt);
+		
+		JLabel lblNewLabel = new JLabel("IN IT THAT OFFENDS EVERYONE.\"");
+		lblNewLabel.setForeground(new Color(128, 128, 128));
+		lblNewLabel.setFont(new Font("Segoe Print", Font.BOLD, 11));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(3, 242, 238, 27);
+		MainWindow.getContentPane().add(lblNewLabel);
+		
+		JLabel lblmaryJoGodwin = new JLabel("-MARY JO GODWIN");
+		lblmaryJoGodwin.setFont(new Font("Chaparral Pro Light", Font.BOLD, 12));
+		lblmaryJoGodwin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblmaryJoGodwin.setForeground(new Color(0, 0, 0));
+		lblmaryJoGodwin.setBounds(167, 269, 106, 21);
+		MainWindow.getContentPane().add(lblmaryJoGodwin);
+		
+		JLabel imgLabel = new JLabel("");
 		imgLabel.setIcon(new ImageIcon(img));
 		imgLabel.setBounds(0, -33, 466, 397);
 		MainWindow.getContentPane().add(imgLabel);
