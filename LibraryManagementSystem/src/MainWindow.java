@@ -13,6 +13,8 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
 import java.sql.Connection;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainWindow {
 
@@ -45,7 +47,7 @@ public class MainWindow {
 	Connection con=null;
 	public MainWindow() {
 		initialize();
-		con = sqlConnection.sqlConnector();
+		
 	}
 
 	/**
@@ -62,15 +64,27 @@ public class MainWindow {
 		MainWindow.getContentPane().setLayout(null);
 		
 		JButton btnSignUp = new JButton("SIGN UP");
+		btnSignUp.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSignUp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				MainWindow.dispose();
+				signUpWindow sw = new signUpWindow();
+				sw.signUpframe.setVisible(true);
+				
+			
+			}
+		});
 		btnSignUp.setBackground(Color.BLACK);
 		btnSignUp.setForeground(Color.WHITE);
-		btnSignUp.setBounds(154, 96, 155, 34);
+		btnSignUp.setBounds(28, 96, 155, 34);
 		MainWindow.getContentPane().add(btnSignUp);
 		
 		JButton btnLogIn = new JButton("LOG IN");
+		btnLogIn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnLogIn.setForeground(Color.WHITE);
 		btnLogIn.setBackground(Color.BLACK);
-		btnLogIn.setBounds(154, 200, 155, 34);
+		btnLogIn.setBounds(28, 218, 155, 34);
 		MainWindow.getContentPane().add(btnLogIn);
 		
 		JLabel lblWelcomeToOur = new JLabel("Welcome  To Our Library Management System");
@@ -79,7 +93,6 @@ public class MainWindow {
 		lblWelcomeToOur.setForeground(new Color(0, 51, 204));
 		lblWelcomeToOur.setHorizontalAlignment(SwingConstants.CENTER);
 		MainWindow.getContentPane().add(lblWelcomeToOur);
-		
 		JLabel lblAllRightsReserved = new JLabel("All Rights Reserved to Sarwan Softwear Systems 2019");
 		lblAllRightsReserved.setForeground(new Color(255, 255, 255));
 		lblAllRightsReserved.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 8));
@@ -88,9 +101,9 @@ public class MainWindow {
 		MainWindow.getContentPane().add(lblAllRightsReserved);
 		
 		JLabel imgLabel = new JLabel("");
-		Image img=new ImageIcon(this.getClass().getResource("/test.jpg")).getImage();
+		Image img=new ImageIcon(this.getClass().getResource("/library1.jpg")).getImage();
 		imgLabel.setIcon(new ImageIcon(img));
-		imgLabel.setBounds(0, -1, 472, 372);
+		imgLabel.setBounds(0, -33, 466, 397);
 		MainWindow.getContentPane().add(imgLabel);
 		MainWindow.setResizable(false);
 	}

@@ -10,7 +10,6 @@ public class sqlConnection {
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String uname= "library";
 			String pass = "lib";
-			JOptionPane.showMessageDialog(null, "Connection Successfull");
 			Connection con= DriverManager.getConnection(url,uname,pass); 
 			
 			return con;
