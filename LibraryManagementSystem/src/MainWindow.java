@@ -64,6 +64,14 @@ public class MainWindow {
 		MainWindow.getContentPane().setLayout(null);
 		
 		JButton btnSignUp = new JButton("SIGN UP");
+		btnSignUp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainWindow.dispose();
+				signUpWindow sw = new signUpWindow();
+				sw.signUpframe.setVisible(true);
+				
+			}
+		});
 		
 		btnSignUp.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
