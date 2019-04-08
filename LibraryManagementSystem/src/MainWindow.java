@@ -65,43 +65,41 @@ public class MainWindow {
 		
 		JButton btnSignUp = new JButton("SIGN UP");
 		btnSignUp.setFont(new Font("Tahoma", Font.BOLD, 11));
-		btnSignUp.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-				MainWindow.dispose();
-				signUpWindow sw = new signUpWindow();
-				sw.signUpframe.setVisible(true);
-				
-			
-			}
-		});
+		
 		btnSignUp.setBackground(Color.BLACK);
 		btnSignUp.setForeground(Color.WHITE);
-		btnSignUp.setBounds(28, 96, 155, 34);
+		btnSignUp.setBounds(28, 131, 155, 34);
 		MainWindow.getContentPane().add(btnSignUp);
 		
 		JButton btnLogIn = new JButton("LOG IN");
-		btnLogIn.setFont(new Font("Tahoma", Font.BOLD, 11));
+				btnLogIn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnLogIn.setForeground(Color.WHITE);
 		btnLogIn.setBackground(Color.BLACK);
-		btnLogIn.setBounds(28, 218, 155, 34);
+		btnLogIn.setBounds(28, 212, 155, 34);
 		MainWindow.getContentPane().add(btnLogIn);
 		
-		JLabel lblWelcomeToOur = new JLabel("Welcome  To Our Library Management System");
+		JLabel lblWelcomeToOur = new JLabel("Welcome  To Our Library");
+		lblWelcomeToOur.setBackground(new Color(51, 204, 204));
 		lblWelcomeToOur.setFont(new Font("Trajan Pro", Font.BOLD, 14));
-		lblWelcomeToOur.setBounds(28, 24, 393, 34);
-		lblWelcomeToOur.setForeground(new Color(0, 51, 204));
-		lblWelcomeToOur.setHorizontalAlignment(SwingConstants.CENTER);
+		lblWelcomeToOur.setBounds(22, 11, 238, 34);
+		lblWelcomeToOur.setForeground(Color.BLUE);
+		lblWelcomeToOur.setHorizontalAlignment(SwingConstants.LEFT);
 		MainWindow.getContentPane().add(lblWelcomeToOur);
 		JLabel lblAllRightsReserved = new JLabel("All Rights Reserved to Sarwan Softwear Systems 2019");
-		lblAllRightsReserved.setForeground(new Color(255, 255, 255));
+		lblAllRightsReserved.setForeground(Color.BLACK);
 		lblAllRightsReserved.setFont(new Font("Yu Gothic UI Semilight", Font.BOLD, 8));
 		lblAllRightsReserved.setHorizontalAlignment(SwingConstants.LEFT);
 		lblAllRightsReserved.setBounds(0, 350, 309, 14);
 		MainWindow.getContentPane().add(lblAllRightsReserved);
 		
 		JLabel imgLabel = new JLabel("");
-		Image img=new ImageIcon(this.getClass().getResource("/library1.jpg")).getImage();
+		Image img=new ImageIcon(this.getClass().getResource("/Library1.jpg")).getImage();
+		
+		JLabel lblManagmentSystem = new JLabel("Managment System");
+		lblManagmentSystem.setFont(new Font("Trajan Pro", Font.BOLD, 14));
+		lblManagmentSystem.setHorizontalAlignment(SwingConstants.CENTER);
+		lblManagmentSystem.setBounds(32, 39, 177, 39);
+		MainWindow.getContentPane().add(lblManagmentSystem);
 		imgLabel.setIcon(new ImageIcon(img));
 		imgLabel.setBounds(0, -33, 466, 397);
 		MainWindow.getContentPane().add(imgLabel);

@@ -46,7 +46,7 @@ public class signUpWindow {
 		signUpframe.getContentPane().setLayout(null);
 		
 		JLabel imglabel = new JLabel("");
-		Image img=new ImageIcon(this.getClass().getResource("/library2.jpg")).getImage();
+		Image img=new ImageIcon(this.getClass().getResource("/Library2.jpg")).getImage();
 		imglabel.setIcon(new ImageIcon(img));
 		imglabel.setBounds(0, 0, 660, 484);
 		signUpframe.getContentPane().add(imglabel);
