@@ -64,6 +64,7 @@ public class MainWindow {
 		MainWindow.getContentPane().setLayout(null);
 		
 		JButton btnSignUp = new JButton("SIGN UP");
+		
 		btnSignUp.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
 		btnSignUp.setBackground(Color.BLACK);
