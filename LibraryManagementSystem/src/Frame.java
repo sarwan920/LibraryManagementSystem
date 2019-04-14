@@ -77,7 +77,7 @@ public class Frame {
 		String pass="1234";
 		Connection con= DriverManager.getConnection(url,uname,pass);
 		
-		frmSignUp = new JFrame();
+		frmSignUp =  new JFrame();
 		frmSignUp.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\sarwa\\Desktop\\icons8-login-64.png"));
 		frmSignUp.getContentPane().setBackground(Color.WHITE);
 		frmSignUp.setTitle("SIGN UP");
