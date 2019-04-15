@@ -82,6 +82,13 @@ public class MainWindow {
 		MainWindow.getContentPane().add(btnSignUp);
 		
 		JButton btnLogIn = new JButton("LOG IN");
+		btnLogIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MainWindow.dispose();
+				logInWindow lw = new logInWindow();
+				lw.frmLogIn.setVisible(true);
+			}
+		});
 		
 				btnLogIn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnLogIn.setForeground(Color.WHITE);
