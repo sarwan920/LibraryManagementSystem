@@ -19,7 +19,7 @@ import com.jgoodies.forms.factories.DefaultComponentFactory;
 
 public class MainWindow {
 
-	private JFrame MainWindow;
+	JFrame MainWindow;
 
 	/**
 	 * Launch the application.
