@@ -68,6 +68,36 @@ public class signUpWindow {
 		btnBack.setBounds(482, 11, 155, 34);
 		signUpframe.getContentPane().add(btnBack);
 		
+		JLabel lblUsername = new JLabel("FIRST NAME");
+		lblUsername.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblUsername.setBounds(10, 80, 108, 27);
+		signUpframe.getContentPane().add(lblUsername);
+		
+		JLabel lblNewLabel = new JLabel("LAST NAME");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel.setBounds(10, 129, 84, 27);
+		signUpframe.getContentPane().add(lblNewLabel);
+		
+		JLabel lblPassword = new JLabel("PASSWORD");
+		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPassword.setBounds(10, 232, 84, 14);
+		signUpframe.getContentPane().add(lblPassword);
+		
+		JLabel lblEmail = new JLabel("EMAIL");
+		lblEmail.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblEmail.setBounds(10, 180, 64, 21);
+		signUpframe.getContentPane().add(lblEmail);
+		
+		JLabel lblCell = new JLabel("CELL#");
+		lblCell.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblCell.setBounds(10, 320, 64, 14);
+		signUpframe.getContentPane().add(lblCell);
+		
+		JLabel lblAddress = new JLabel("ADDRESS");
+		lblAddress.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblAddress.setBounds(10, 274, 64, 14);
+		signUpframe.getContentPane().add(lblAddress);
+		
 		JLabel imglabel = new JLabel("");
 		imglabel.setForeground(Color.DARK_GRAY);
 		imglabel.setBackground(Color.DARK_GRAY);

@@ -98,7 +98,30 @@ public class logInWindow {
 		passwordField.setBounds(133, 212, 240, 29);
 		frmLogIn.getContentPane().add(passwordField);
 		
+		JButton btnLogin = new JButton("LOGIN");
+		btnLogin.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnLogin.setBackground(Color.DARK_GRAY);
+		btnLogin.setForeground(Color.WHITE);
+		btnLogin.setBounds(133, 296, 155, 34);
+		frmLogIn.getContentPane().add(btnLogin);
+		
+		JLabel lblLoginToYour = new JLabel("LOGIN TO YOUR");
+		lblLoginToYour.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblLoginToYour.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLoginToYour.setBounds(49, 29, 341, 46);
+		frmLogIn.getContentPane().add(lblLoginToYour);
+		
+		JLabel lblAccount = new JLabel("ACCOUNT");
+		lblAccount.setFont(new Font("Times New Roman", Font.ITALIC, 18));
+		lblAccount.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAccount.setForeground(Color.RED);
+		lblAccount.setBounds(154, 75, 124, 14);
+		frmLogIn.getContentPane().add(lblAccount);
+		
 		JLabel imgLabel = new JLabel("");
+		imgLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		imgLabel.setForeground(Color.WHITE);
+		imgLabel.setBackground(Color.DARK_GRAY);
 		imgLabel.setIcon(new ImageIcon(img));
 		imgLabel.setBounds(0, 0, 660, 484);
 		frmLogIn.getContentPane().add(imgLabel);
