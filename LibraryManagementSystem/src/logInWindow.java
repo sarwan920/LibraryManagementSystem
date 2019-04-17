@@ -4,11 +4,15 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -37,6 +41,8 @@ public class logInWindow {
 			}
 		});
 	}
+	
+	Connection con = null;
 
 	/**
 	 * Create the application.
@@ -49,6 +55,7 @@ public class logInWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		con = sqlConnection.sqlConnector();
 		frmLogIn = new JFrame();
 		frmLogIn.setTitle("LOG IN");
 		frmLogIn.setBounds(100, 100, 663, 506);
@@ -99,6 +106,14 @@ public class logInWindow {
 		frmLogIn.getContentPane().add(passwordField);
 		
 		JButton btnLogin = new JButton("LOGIN");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+					
+				
+			
+				
+			}
+		});
 		btnLogin.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnLogin.setBackground(Color.DARK_GRAY);
 		btnLogin.setForeground(Color.WHITE);

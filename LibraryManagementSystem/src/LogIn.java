@@ -121,7 +121,6 @@ public class LogIn {
 					
 				PreparedStatement st =con.prepareStatement(query);
 				
-				
 				st.setString(1,LUTF.getText());
 				st.setString(2, LPTF.getText());
 				ResultSet rs = st.executeQuery();
@@ -144,6 +143,7 @@ public class LogIn {
 					//LPTF.setText("");
 					JOptionPane.showMessageDialog(null,"Username or  Password is incorrect");
 				}
+				
 				
 				
 				

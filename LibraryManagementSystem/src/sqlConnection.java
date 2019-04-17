@@ -11,7 +11,7 @@ public class sqlConnection {
 			String uname= "library";
 			String pass = "lib";
 			Connection con= DriverManager.getConnection(url,uname,pass); 
-			
+		
 			return con;
 		}
 		
