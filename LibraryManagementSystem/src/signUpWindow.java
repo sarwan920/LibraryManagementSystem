@@ -25,6 +25,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.awt.Toolkit;
 
 public class signUpWindow {
 
@@ -69,6 +70,7 @@ public class signUpWindow {
 	private void initialize() {
 		con = sqlConnection.sqlConnector();
 		signUpframe = new JFrame();
+		signUpframe.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Library Management System\\App Icon.png"));
 		signUpframe.setTitle("SIGN UP");
 		signUpframe.setResizable(false);
 		signUpframe.setBounds(100, 100, 663, 506);

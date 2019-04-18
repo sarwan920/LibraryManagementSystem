@@ -17,12 +17,13 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.JPasswordField;
+import java.awt.Toolkit;
 
 public class logInWindow {
 
 	JFrame frmLogIn;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField ETF;
+	private JPasswordField PTF;
 	//protected Object frame;
 
 	/**
@@ -50,6 +51,7 @@ public class logInWindow {
 	public logInWindow() {
 		initialize();
 	}
+	
 
 	/**
 	 * Initialize the contents of the frame.
@@ -57,6 +59,7 @@ public class logInWindow {
 	private void initialize() {
 		con = sqlConnection.sqlConnector();
 		frmLogIn = new JFrame();
+		frmLogIn.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Library Management System\\App Icon.png"));
 		frmLogIn.setTitle("LOG IN");
 		frmLogIn.setBounds(100, 100, 663, 506);
 		frmLogIn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -90,29 +93,67 @@ public class logInWindow {
 		lblPassword.setBounds(32, 200, 91, 34);
 		frmLogIn.getContentPane().add(lblPassword);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		textField.setForeground(Color.WHITE);
-		textField.setBackground(Color.LIGHT_GRAY);
-		textField.setBounds(133, 142, 240, 29);
-		frmLogIn.getContentPane().add(textField);
-		textField.setColumns(10);
+		ETF = new JTextField();
+		ETF.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		ETF.setForeground(Color.WHITE);
+		ETF.setBackground(Color.LIGHT_GRAY);
+		ETF.setBounds(133, 142, 240, 29);
+		frmLogIn.getContentPane().add(ETF);
+		ETF.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		passwordField.setForeground(Color.WHITE);
-		passwordField.setBackground(Color.LIGHT_GRAY);
-		passwordField.setBounds(133, 212, 240, 29);
-		frmLogIn.getContentPane().add(passwordField);
+		PTF = new JPasswordField();
+		PTF.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		PTF.setForeground(Color.WHITE);
+		PTF.setBackground(Color.LIGHT_GRAY);
+		PTF.setBounds(133, 212, 240, 29);
+		frmLogIn.getContentPane().add(PTF);
 		
 		JButton btnLogin = new JButton("LOGIN");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-					
 				
-			
+				try {
+					String query="select EMAIL,PASS_WORD from AccountData where EMAIL=? and PASS_WORD=?";
+					
+					int count=0;
+						
+					PreparedStatement st =con.prepareStatement(query);
+					
+					st.setString(1,ETF.getText());
+					st.setString(2,PTF.getText());
+					ResultSet rs = st.executeQuery();
+					while (rs.next())
+					{
+						count++;
+					}
+					
+					if(count==1)
+					{
+						
+						frmLogIn.dispose();
+						AfterLoginWindow afl = new AfterLoginWindow();
+						afl.frame.setVisible(true);
+						
+					}
+					else
+					{
+						ETF.setText("");
+						PTF.setText("");
+						JOptionPane.showMessageDialog(null,"Username or  Password is incorrect");
+					}
+				
+				
+				}
+				
+				catch (Exception e)
+				{
+					JOptionPane.showMessageDialog(null, e);
+				}
+				
+				
 				
 			}
+				
 		});
 		btnLogin.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnLogin.setBackground(Color.DARK_GRAY);

@@ -4,10 +4,11 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
+import java.awt.Toolkit;
 
 public class AfterLoginWindow {
 
-	private JFrame frame;
+	JFrame frame;
 	private JTextField textField;
 
 	/**
@@ -38,6 +39,7 @@ public class AfterLoginWindow {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Library Management System\\App Icon.png"));
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);

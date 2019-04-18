@@ -56,6 +56,7 @@ public class MainWindow {
 	 */
 	private void initialize() {
 		MainWindow = new JFrame();
+		MainWindow.setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\Library Management System\\App Icon.png"));
 		MainWindow.setTitle("WELCOME TO  LIBRARY");
 		MainWindow.getContentPane().setBackground(SystemColor.activeCaption);
 		MainWindow.getContentPane().setForeground(SystemColor.activeCaption);
